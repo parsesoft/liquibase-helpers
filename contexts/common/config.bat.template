@@ -1,0 +1,8 @@
+:: Connection
+set LBL_DATABASE=
+set LBL_SERVER=
+set LBL_USERNAME=
+set LBL_PASSWORD=
+
+:: Context by default
+::set LBL_CONTEXT=

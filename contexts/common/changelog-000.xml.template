@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Refactorings: http://www.liquibase.org/documentation/changes/index.html -->
+<!-- Column tag: http://www.liquibase.org/documentation/column.html -->
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+  <!--
+
+  <changeSet id="add TABLE_COLUMN" author="AUTHOR">
+    <addColumn tableName="TABLE">
+      <column name="TABLE_COLUMN" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+    </addColumn>
+  </changeSet>
+
+  <changeSet id="create TABLE" author="AUTHOR" >
+    <createTable tableName="TABLE">
+      <column name="TABLE_COLUMN1" type="int" autoIncrement="true">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="TABLE_COLUMN2" type="varchar(255)">
+         <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet id="drop TABLE_COLUMN1" author="AUTHOR" >
+    <dropColumn tableName="TABLE" columnName="TABLE_COLUMN1"/>
+  </changeSet>
+
+  <changeSet id="rename TABLE_COLUMN1" author="AUTHOR" >
+    <renameColumn tableName="TABLE" oldColumnName="TABLE_COLUMN_OLD" newColumnName="TABLE_COLUMN_NEW"/>
+  </changeSet>
+
+  <changeSet id="change TABLE_COLUMN1" author="AUTHOR" >
+    <modifyDataType tableName="TABLE" columnName="TABLE_COLUMN" newDataType="int"/>
+  </changeSet>
+
+  <changeSet id="create IDX_NAME" author="AUTHOR" >
+    <createIndex tableName="TABLE" indexName="IDX_NAME" unique="false">
+      <column name="TABLE_COLUMN"/>
+    </createIndex>
+  </changeSet>
+
+  <changeSet id="execute sql" author="AUTHOR" >
+    <sql >
+insert into person (name) values ('Alice')
+GO
+insert into person (name) values ('Bob')
+    </sql>
+  </changeSet>
+
+  -->
+
+</databaseChangeLog>
