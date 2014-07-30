@@ -8,6 +8,35 @@
 - Generation of Microsoft SQL Server objects (**procedures**, **functions** and **views**) in formatted SQL which can be edited and tested using the usual tools (eg. Management Studio).
 
 
+## Dependencies
+
+### Java runtime
+
+Download from [https://java.com/en/download/manual.jsp](https://java.com/en/download/manual.jsp)
+
+### SqlCmd.exe
+
+This comes with SQL Server, but can be installed independently. Select *SqlCmdLnUtils.msi* and *sqlncli.msi* for your platform either from:
+
+- [Microsoft SQL Server 2008 R2 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=26728)
+- [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=35580) (recommended)
+
+Then, first run `sqlncli.msi` and then `SqlCmdLnUtils.msi`.
+
+### Liquibase
+
+Included in *tools* directory.
+
+
+## Liquibase basics
+Pointers to Liquibase documentation:
+
+- [Quickstart](http://www.liquibase.org/quickstart.html)
+- [Adding Liquibase on an existing project](http://www.liquibase.org/documentation/existing_project.html)
+- [Bundled Liquibase changes](http://www.liquibase.org/documentation/changes/)
+- [Column tag](http://www.liquibase.org/documentation/column.html)
+
+
 ## Helpers
 
 - `do.bat <command>`: Runs a `<command>` over *main.xml* in both common and specific contexts. See [Liquibase commands](http://www.liquibase.org/documentation/command_line.html).
@@ -81,34 +110,9 @@ Note you can also [create a tag in the changelog](http://www.liquibase.org/docum
 - Run `do rollbackCount <N>` to rollback the last N changes.
 
 
-## Dependencies
-
-### Java runtime
-
-Download from [https://java.com/en/download/manual.jsp](https://java.com/en/download/manual.jsp)
-
-### SqlCmd.exe
-
-This comes with SQL Server, but can be installed independently. Select *SqlCmdLnUtils.msi* and *sqlncli.msi* for your platform either from:
-
-- [Microsoft SQL Server 2008 R2 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=26728)
-- [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=35580) (recommended)
-
-Then, first run `sqlncli.msi` and then `SqlCmdLnUtils.msi`.
-
-
-## Liquibase basics
-Pointers to Liquibase documentation:
-
-- [Quickstart](http://www.liquibase.org/quickstart.html)
-- [Adding Liquibase on an existing project](http://www.liquibase.org/documentation/existing_project.html)
-- [Bundled Liquibase changes](http://www.liquibase.org/documentation/changes/)
-- [Column tag](http://www.liquibase.org/documentation/column.html)
-
-
 ## Best practices
 
-(Adapted from [here](http://www.liquibase.org/bestpractices.html))
+Adapted from [here](http://www.liquibase.org/bestpractices.html).
 
 ### Managing Stored Procedures
 
@@ -153,5 +157,3 @@ Environment separation (DEV, QA, PROD) can be achieved using `context`.
 - Test the new application code together with the database change;
 - Commit both the changeSet and the application code.
 
-
----
