@@ -25,8 +25,10 @@ if not defined LBL_CONTEXT (
 
 :: Validate value is valid
 if /i [%LBL_CONTEXT%]==[common] goto error
+if [%LBL_CONTEXT%]==[*] goto ok
 if not exist %~dp0..\contexts\%LBL_CONTEXT%\nul goto error
 
+:ok
 exit /b 0
 
 :error
